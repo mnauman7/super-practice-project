@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+
+  app-server:
+    image: springboot-monolithic-app
+    container_name: app-server
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+    depends_on:
+      db-server:
+        condition: service_started
+    ports:
+      - 5050:5050
+    environment:
+      - "SPRING_PROFILES_ACTIVE=docker"
+      - "SPRING_DATASOURCE_URL=jdbc:mysql://db-server:3306/app_db?useSSL=false&allowPublicKeyRetrieval=true"
+      - "SPRING_DATASOURCE_USERNAME=app_server"
+      - "SPRING_DATASOURCE_PASSWORD=apppassword"
+
+
+  ui-service:
+    image: springboot-monolithic-angular
+    container_name: web-service
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+    ports:
+      - 4000:8080
+
+  ## MySQL instance 
+  ## Creating mysql server with only root (no databases)
+  ## Will create databases for this manually by logging into this mysql root and executing scripts 
+  db-server:
+    image: mysql:8.1
+    restart: always
+    environment:
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: 'petclinicroot'
+    ports:
+      # <Port exposed> : <MySQL Port running inside container>
+      - '3306:3306'
+    # Using volumes to persist data on restart
+    volumes:
+      - springboot-monolithic-mysql-db:/var/lib/mysql
+# Names our volume
+volumes:
+  springboot-monolithic-mysql-db:
+    name: petclinic-monolithic-springboot_springboot-monolithic-mysql-db
