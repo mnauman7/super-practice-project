@@ -2,7 +2,7 @@
 
 ## Prerequisites 🛠️
 
-Following tools are needed to run/develop the project.
+Following tools are needed to Modify the project.
 
 ### General Tools
 * **Git**: For version control.
