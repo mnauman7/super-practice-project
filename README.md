@@ -54,7 +54,7 @@ docker build -t super-practice-app-ui:latest .
 
 1). Run MySql db:
 ````
-docker compose up db-server -d
+docker compose up db-service -d
 ````
 
 2). Run UI server (angular, UI):
@@ -64,7 +64,7 @@ docker compose up ui-service -d
 
 3). Run App server (java, backend):
 ````
-docker compose up app-server -d
+docker compose up app-service -d
 ````
 
 Note: App server is dependent on MySql db, so please wait few mins for db-server container to be ready before starting app-server container.

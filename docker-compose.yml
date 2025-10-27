@@ -2,7 +2,7 @@ version: '3'
 
 services:
 
-  app-server:
+  app-service:
     image: super-practice-app-backend
     container_name: app-service
     deploy:
@@ -34,7 +34,7 @@ services:
   ## MySQL instance 
   ## Creating mysql server with only root (no databases)
   ## Will create databases for this manually by logging into this mysql root and executing scripts 
-  db-server:
+  db-service:
     image: mysql:8.1
     restart: always
     environment:
