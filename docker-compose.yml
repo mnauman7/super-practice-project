@@ -3,8 +3,8 @@ version: '3'
 services:
 
   app-server:
-    image: springboot-monolithic-app
-    container_name: app-server
+    image: super-practice-app-backend
+    container_name: app-service
     deploy:
       resources:
         limits:
@@ -22,7 +22,7 @@ services:
 
 
   ui-service:
-    image: springboot-monolithic-angular
+    image: super-practice-app-ui
     container_name: web-service
     deploy:
       resources:
@@ -39,14 +39,14 @@ services:
     restart: always
     environment:
       # Password for root access
-      MYSQL_ROOT_PASSWORD: 'petclinicroot'
+      MYSQL_ROOT_PASSWORD: 'superpracticeapproot'
     ports:
       # <Port exposed> : <MySQL Port running inside container>
       - '3306:3306'
     # Using volumes to persist data on restart
     volumes:
-      - springboot-monolithic-mysql-db:/var/lib/mysql
+      - super-practice-app-mysql-db:/var/lib/mysql
 # Names our volume
 volumes:
-  springboot-monolithic-mysql-db:
-    name: petclinic-monolithic-springboot_springboot-monolithic-mysql-db
+  super-practice-app-mysql-db:
+    name: super-practice-app-mysql-db
