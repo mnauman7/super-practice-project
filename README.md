@@ -1,5 +1,36 @@
 <b>This is a practice project designed to help learn various concepts in Java, Spring Boot, and React.</b>
 
+## Prerequisites 🛠️
+
+Following tools are needed to run/develop the project.
+
+### General Tools
+* **Git**: For version control.
+* **Docker Desktop**: For containerization and running services.
+
+---
+
+### Backend Tools
+* **Maven**: For build automation and dependency management.
+* **JDK** (Java Development Kit): The environment for compiling and running Java code.
+* **Code editor** (Eclipse, Cursor, etc.): Your preferred IDE for backend development.
+
+---
+
+### Frontend Tools
+* **NVM Windows**: Node Version Manager for installing and managing multiple Node.js versions.
+* **NPM v10.5.2** (install via NVM): The specific version of the Node Package Manager required.
+* **Code editor** (VS Code, Cursor, etc.): Your preferred editor for frontend development.
+
+---
+
+### Database Tools
+* **DBeaver** (or similar tool to browse MySQL database): A universal database tool to connect to and manage the project's MySQL database.
+
+---
+
+&nbsp;
+
 <b>Steps to build docker images:</b>
 
 1). Build app-service docker image (java, backend) </br>
