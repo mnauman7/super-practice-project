@@ -31,7 +31,7 @@ services:
     ports:
       - 4000:8080
 
-  ## MySQL instance (testing)
+  ## MySQL instance (testing 321)
   ## Creating mysql server with only root (no databases)
   ## Will create databases for this manually by logging into this mysql root and executing scripts 
   db-server:
