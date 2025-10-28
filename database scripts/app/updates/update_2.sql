@@ -1,8 +1,5 @@
-use app_db;
+USE app_db;
 
 ALTER TABLE user
-ADD email varchar(255) NOT NULL
-
-
-ALTER TABLE user
-ADD password varchar(100) NOT NULL
+ADD FOREIGN KEY (parent_user)
+REFERENCES user(id)
