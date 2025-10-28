@@ -12,7 +12,7 @@ Following tools are needed to run/develop the project.
 
 ### Backend Tools
 * **Maven**: For build automation and dependency management.
-* **JDK** (Java Development Kit): The environment for compiling and running Java code.
+* **JDK 17** (Java Development Kit): The environment for compiling and running Java code.
 * **Code editor** (Eclipse, Cursor, etc.): Your preferred IDE for backend development.
 
 ---
