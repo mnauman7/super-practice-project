@@ -31,6 +31,41 @@ Following tools are needed to run/develop the project.
 
 &nbsp;
 
+<b>Run application locally:</b> </br>
+
+1). Run MySql db:
+````
+1.1). docker compose up db-service -d
+
+1.2). Connect to the database in DBeaver using following details:
+URL:
+jdbc:mysql://localhost:3306?allowPublicKeyRetrieval=true&useSSL=false
+
+Username:
+root
+
+Password:
+superpracticeapproot
+
+1.3). Initialize data for the database (only need to do this once)
+Execute all the scripts in the database scripts folder in the following order:
+schema.sql
+update scripts 
+````
+
+2). Run UI server (angular, UI):
+````
+
+````
+
+3). Run App server (java, backend):
+````
+
+````
+
+&nbsp;
+&nbsp;
+
 <b>Steps to build docker images:</b>
 
 1). Build app-service docker image (java, backend) </br>
