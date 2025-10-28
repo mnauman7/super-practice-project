@@ -49,7 +49,7 @@ superpracticeapproot
 
 1.3). Initialize data for the database (only need to do this once)
 Execute all the scripts in the database scripts folder in the following order:
-schema.sql
+schema scripts
 update scripts 
 ````
 
