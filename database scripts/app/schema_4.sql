@@ -1,9 +1,4 @@
-CREATE DATABASE IF NOT EXISTS app_db;
-
 -- Creating db user for user-service app
-CREATE USER 'app_server'@'%' IDENTIFIED BY 'apppassword';
-GRANT ALL PRIVILEGES ON app_db.* TO 'app_server'@'%' WITH GRANT OPTION;
-
 USE app_db;
 
 CREATE TABLE IF NOT EXISTS user (
