@@ -1,4 +1,4 @@
-<b>This is a practice project designed to help learn various concepts in Java, Spring Boot, and React.</b>
+<b>LLP</b>
 
 ## Prerequisites 🛠️
 
