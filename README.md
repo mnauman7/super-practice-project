@@ -1,8 +1,8 @@
-<b>This is a practice project designed to help learn various concepts in Java, Spring Boot, and React.</b>
+<b>LLP</b>
 
 ## Prerequisites 🛠️
 
-Following tools are needed to run/develop the project.
+Following tools are needed to Modify the project.
 
 ### General Tools
 * **Git**: For version control.
