@@ -36,7 +36,8 @@ Following tools are needed to run/develop the project.
 
 1). Run MySql db:
 ````
-1.1). docker compose up db-service -d
+1.1). Run the database:
+docker compose up db-service -d
 
 1.2). Connect to the database in DBeaver using following details:
 URL:
