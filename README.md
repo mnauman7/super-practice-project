@@ -11,8 +11,8 @@ Following tools are needed to run/develop the project.
 ---
 
 ### Backend Tools
-* **Maven**: For build automation and dependency management.
 * **JDK 17** (Java Development Kit): The environment for compiling and running Java code.
+* **Maven**: A tool For build automation and dependency management for Java/JVM-based projects.
 * **Code editor** (Eclipse, Cursor, etc.): Your preferred IDE for backend development.
 * **Postman**: A tool to test backend endpoints.
 
@@ -20,7 +20,8 @@ Following tools are needed to run/develop the project.
 
 ### Frontend Tools
 * **NVM Windows**: Node Version Manager for installing and managing multiple Node.js versions.
-* **Node.js v10 and Node.js v16** (install via NVM): Required Node versions to run the project. (Node.js comes bundled with npm)
+* **Node.js v10 and Node.js v16** (install via NVM): Required Node versions to run the project.
+* **NPM (Comes bundled with Node.js)**: A tool For dependency management for Node.js and JavaScript projects.
 * **Code editor** (VS Code, Cursor, etc.): Your preferred editor for frontend development.
 
 ---
