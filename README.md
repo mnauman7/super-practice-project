@@ -14,6 +14,7 @@ Following tools are needed to run/develop the project.
 * **Maven**: For build automation and dependency management.
 * **JDK 17** (Java Development Kit): The environment for compiling and running Java code.
 * **Code editor** (Eclipse, Cursor, etc.): Your preferred IDE for backend development.
+* **Postman**: A tool to test backend endpoints.
 
 ---
 
@@ -66,7 +67,16 @@ npm start
 
 3). Run App server (java, backend):
 ````
+3.0). Prerequisites:
+Make sure the database is up and running before running the backend project.
 
+3.1). Run project:
+mvn spring-boot:run
+
+3.2). Test if project is running:
+In Postman, hit the following endpoint: GET http://localhost:5050/health
+
+The response message from the endpoint should be: App Service is running!
 ````
 
 &nbsp;

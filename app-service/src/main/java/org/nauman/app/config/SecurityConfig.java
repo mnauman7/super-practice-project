@@ -25,7 +25,7 @@ import org.springframework.web.filter.CorsFilter;
 @EnableWebSecurity(debug = true)
 public class SecurityConfig {
 	
-	private static final String[] SPRING_SECURITY_ALLOWED_URLS = new String[] {"/auth/login"};
+	private static final String[] SPRING_SECURITY_ALLOWED_URLS = new String[] {"/auth/login", "/health"};
 	
 	public static final List<String> SPRING_SECURITY_ALLOWED_URLS_LIST =
 		      Collections.unmodifiableList(Arrays.asList(SPRING_SECURITY_ALLOWED_URLS));
