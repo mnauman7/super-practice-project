@@ -20,7 +20,7 @@ Following tools are needed to run/develop the project.
 
 ### Frontend Tools
 * **NVM Windows**: Node Version Manager for installing and managing multiple Node.js versions.
-* **Node.js v10 and Node.js v16** (install via NVM): The specific version of the Node Package Manager required.
+* **Node.js v10 and Node.js v16** (install via NVM): Required Node versions to run the project. (Node.js comes bundled with npm)
 * **Code editor** (VS Code, Cursor, etc.): Your preferred editor for frontend development.
 
 ---
