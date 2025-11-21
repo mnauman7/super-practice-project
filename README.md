@@ -20,7 +20,8 @@ Following tools are needed to run/develop the project.
 
 ### Frontend Tools
 * **NVM Windows**: Node Version Manager for installing and managing multiple Node.js versions.
-* **Node.js v10 and Node.js v16** (install via NVM): Required Node versions to run the project.
+* **[Angular UI] Node.js v10 and Node.js v16** (install via NVM): Required Node versions to run the angular project.
+* **[React UI] Node.js v20** (install via NVM): Required Node version to run the react project.
 * **NPM (Comes bundled with Node.js)**: A tool For dependency management for Node.js and JavaScript projects.
 * **Code editor** (VS Code, Cursor, etc.): Your preferred editor for frontend development.
 
@@ -56,14 +57,27 @@ schema scripts
 update scripts 
 ````
 
-2). Run UI server (angular, UI):
+2). Run UI server:
 ````
-2.1). Build node modules:
+[Option A: angular, UI]
+
+2.1a). Build node modules for the angular project:
 nvm use 10 (Switch to node v10)
 npm install
 
-2.2). Run project:
+2.2a). Run the angular project:
 nvm use 16 (Switch to node v16)
+npm start
+
+
+[Option B: react, UI]
+
+2.1b). Build node modules for the react project:
+nvm use 20 (Switch to node v20)
+npm install
+
+2.2b). Run the react project:
+nvm use 20 (Switch to node v20)
 npm start
 ````
 
