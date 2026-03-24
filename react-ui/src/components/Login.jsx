@@ -39,29 +39,30 @@ function Login() {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     
-    // Validate all fields
-    const emailError = validateField('email', loginCreds.email)
-    const passwordError = validateField('password', loginCreds.password)
+    const emailError = validateField('email', loginCreds.email);
+    const passwordError = validateField('password', loginCreds.password);
     
     setErrors({
       email: emailError,
       password: passwordError
-    })
+    });
 
     if (emailError || passwordError) {
-      return
+      return;
     }
 
     try {
-      const response = await authService.loginUser(loginCreds)
-      login(response.token)
-      navigate('/home')
+      const response = await authService.loginUser(loginCreds);
+      // This line is crucial for your UserTable!
+      localStorage.setItem('token', response.token); 
+      login(response.token);
+      navigate('/home');
     } catch (error) {
-      setErrorMessage(error)
+      setErrorMessage(error.toString());
     }
-  }
+  };
 
   const isFormValid = loginCreds.email.length >= 2 && loginCreds.password.length >= 2
 

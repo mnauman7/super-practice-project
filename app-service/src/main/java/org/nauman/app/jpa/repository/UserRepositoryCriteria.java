@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-import jakarta.persistence.Query;
+import jakarta.persistence.TypedQuery;
 import jakarta.persistence.Tuple;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
@@ -30,8 +30,7 @@ public class UserRepositoryCriteria {
 		
 		criteriaQuery.from(UserEntity.class);
 		
-		Query query = enitityManager.createQuery(criteriaQuery);
-		
+		TypedQuery<UserEntity> query = enitityManager.createQuery(criteriaQuery);		
 		return query.getResultList();
 	}
 	
@@ -54,7 +53,7 @@ public class UserRepositoryCriteria {
 		Predicate parentIdCheck = criteriaBuilder.equal(root.get("parentId"), userId);
 		criteriaQuery.where(parentIdCheck);
 		
-		Query query = enitityManager.createQuery(criteriaQuery);
+		TypedQuery<Tuple> query = enitityManager.createQuery(criteriaQuery);
 		
 		List<Tuple> resultList = query.getResultList();
 		
@@ -90,9 +89,9 @@ public class UserRepositoryCriteria {
 		Predicate userIdCheck = criteriaBuilder.equal(root.get("id"), userId);
 		criteriaQuery.where(userIdCheck);
 		
-		Query query = enitityManager.createQuery(criteriaQuery);
+		TypedQuery<Tuple> query = enitityManager.createQuery(criteriaQuery);
 		
-		List<Tuple> resultList = query.setMaxResults(1).getResultList();
+		List<Tuple> resultList = query.getResultList();
 		
 		for (Tuple child : resultList) {
 			String firstName = (String) child.get(0);
